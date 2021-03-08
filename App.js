@@ -20,7 +20,7 @@ const rootReducers = combineReducers({
 })
 const globalStore = createStore(rootReducers, applyMiddleware(ReduxThunk));
 const loadFonts = () => {
-  return FontUtil.({
+  return FontUtil.loadAsync({
     'nerko-one': require('./assets/fonts/NerkoOne-Regular.ttf'),
     'oswald-bold': require('./assets/fonts/Oswald-Bold.ttf')
   });
